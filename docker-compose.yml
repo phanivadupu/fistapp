@@ -4,6 +4,8 @@ services:
     image: vadupuphani/moviesservice:latest
     ports:
       - "80:80"
+    volumes:
+      - "moviesvol"
     deploy:
       replicas: 3
 
@@ -11,6 +13,8 @@ services:
     image: vadupuphani/trainservice:latest
     ports:
       - "81:80"
+    volumes:
+      - "trainvol"
     deploy:
       replicas: 3
 
@@ -18,6 +22,8 @@ services:
     image: vadupuphani/dthservice:latest
     ports:
       - "82:80"
+    volumes:
+      - "dthvol"
     deploy:
       replicas: 3
 
@@ -25,5 +31,7 @@ services:
     image: vadupuphani/rechargeservice:latest
     ports:
       - "83:80"
+    volumes:
+      - "rechargevol"
     deploy:
       replicas: 3
